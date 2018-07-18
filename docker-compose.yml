@@ -1,0 +1,11 @@
+# Docker compose 2.x, to be used for local development
+version: '2.3'
+services:
+  chrony:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker-mac-chrony:latest
+    privileged: true
+    restart: always
+    container_name: chrony
